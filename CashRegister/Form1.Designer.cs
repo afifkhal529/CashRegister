@@ -32,8 +32,8 @@
             this.titleLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.friesLabel = new System.Windows.Forms.Label();
-            this.samosaLabel = new System.Windows.Forms.Label();
-            this.samosaInput = new System.Windows.Forms.TextBox();
+            this.pastaLabel = new System.Windows.Forms.Label();
+            this.pastaInput = new System.Windows.Forms.TextBox();
             this.friesInput = new System.Windows.Forms.TextBox();
             this.nihariLabel = new System.Windows.Forms.Label();
             this.receiptOutputLabel = new System.Windows.Forms.Label();
@@ -51,7 +51,8 @@
             this.calculateChangeButton = new System.Windows.Forms.Button();
             this.tenderLabel = new System.Windows.Forms.Label();
             this.tenderInput = new System.Windows.Forms.TextBox();
-            this.printLabel = new System.Windows.Forms.Button();
+            this.printButton = new System.Windows.Forms.Button();
+            this.orderButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // colourLabel
@@ -97,23 +98,23 @@
             this.friesLabel.TabIndex = 3;
             this.friesLabel.Text = "Fries";
             // 
-            // samosaLabel
+            // pastaLabel
             // 
-            this.samosaLabel.AutoSize = true;
-            this.samosaLabel.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.samosaLabel.ForeColor = System.Drawing.Color.Ivory;
-            this.samosaLabel.Location = new System.Drawing.Point(38, 192);
-            this.samosaLabel.Name = "samosaLabel";
-            this.samosaLabel.Size = new System.Drawing.Size(66, 23);
-            this.samosaLabel.TabIndex = 4;
-            this.samosaLabel.Text = "Samosas";
+            this.pastaLabel.AutoSize = true;
+            this.pastaLabel.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pastaLabel.ForeColor = System.Drawing.Color.Ivory;
+            this.pastaLabel.Location = new System.Drawing.Point(38, 192);
+            this.pastaLabel.Name = "pastaLabel";
+            this.pastaLabel.Size = new System.Drawing.Size(47, 23);
+            this.pastaLabel.TabIndex = 4;
+            this.pastaLabel.Text = "Pasta";
             // 
-            // samosaInput
+            // pastaInput
             // 
-            this.samosaInput.Location = new System.Drawing.Point(155, 195);
-            this.samosaInput.Name = "samosaInput";
-            this.samosaInput.Size = new System.Drawing.Size(54, 20);
-            this.samosaInput.TabIndex = 8;
+            this.pastaInput.Location = new System.Drawing.Point(155, 195);
+            this.pastaInput.Name = "pastaInput";
+            this.pastaInput.Size = new System.Drawing.Size(54, 20);
+            this.pastaInput.TabIndex = 8;
             // 
             // friesInput
             // 
@@ -140,7 +141,6 @@
             this.receiptOutputLabel.Name = "receiptOutputLabel";
             this.receiptOutputLabel.Size = new System.Drawing.Size(233, 252);
             this.receiptOutputLabel.TabIndex = 21;
-            this.receiptOutputLabel.Text = "receipt label";
             // 
             // calculateButton
             // 
@@ -275,18 +275,31 @@
             this.tenderInput.Size = new System.Drawing.Size(54, 20);
             this.tenderInput.TabIndex = 39;
             // 
-            // printLabel
+            // printButton
             // 
-            this.printLabel.BackColor = System.Drawing.Color.Black;
-            this.printLabel.Font = new System.Drawing.Font("Cascadia Code", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printLabel.ForeColor = System.Drawing.Color.Ivory;
-            this.printLabel.Location = new System.Drawing.Point(321, 354);
-            this.printLabel.Name = "printLabel";
-            this.printLabel.Size = new System.Drawing.Size(120, 29);
-            this.printLabel.TabIndex = 40;
-            this.printLabel.Text = "Print Receipt";
-            this.printLabel.UseVisualStyleBackColor = false;
-            this.printLabel.Click += new System.EventHandler(this.printLabel_Click);
+            this.printButton.BackColor = System.Drawing.Color.Black;
+            this.printButton.Font = new System.Drawing.Font("Cascadia Code", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printButton.ForeColor = System.Drawing.Color.Ivory;
+            this.printButton.Location = new System.Drawing.Point(321, 354);
+            this.printButton.Name = "printButton";
+            this.printButton.Size = new System.Drawing.Size(120, 29);
+            this.printButton.TabIndex = 40;
+            this.printButton.Text = "Print Receipt";
+            this.printButton.UseVisualStyleBackColor = false;
+            this.printButton.Click += new System.EventHandler(this.printButton_Click);
+            // 
+            // orderButton
+            // 
+            this.orderButton.BackColor = System.Drawing.Color.Black;
+            this.orderButton.Font = new System.Drawing.Font("Cascadia Code", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderButton.ForeColor = System.Drawing.Color.Ivory;
+            this.orderButton.Location = new System.Drawing.Point(554, 375);
+            this.orderButton.Name = "orderButton";
+            this.orderButton.Size = new System.Drawing.Size(84, 29);
+            this.orderButton.TabIndex = 41;
+            this.orderButton.Text = "New Order";
+            this.orderButton.UseVisualStyleBackColor = false;
+            this.orderButton.Click += new System.EventHandler(this.orderButton_Click);
             // 
             // appetizerLabel
             // 
@@ -294,7 +307,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.printLabel);
+            this.Controls.Add(this.orderButton);
+            this.Controls.Add(this.printButton);
             this.Controls.Add(this.tenderInput);
             this.Controls.Add(this.tenderLabel);
             this.Controls.Add(this.calculateChangeButton);
@@ -312,8 +326,8 @@
             this.Controls.Add(this.receiptOutputLabel);
             this.Controls.Add(this.nihariLabel);
             this.Controls.Add(this.friesInput);
-            this.Controls.Add(this.samosaInput);
-            this.Controls.Add(this.samosaLabel);
+            this.Controls.Add(this.pastaInput);
+            this.Controls.Add(this.pastaLabel);
             this.Controls.Add(this.friesLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.titleLabel);
@@ -331,8 +345,8 @@
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label friesLabel;
-        private System.Windows.Forms.Label samosaLabel;
-        private System.Windows.Forms.TextBox samosaInput;
+        private System.Windows.Forms.Label pastaLabel;
+        private System.Windows.Forms.TextBox pastaInput;
         private System.Windows.Forms.TextBox friesInput;
         private System.Windows.Forms.Label nihariLabel;
         private System.Windows.Forms.Label receiptOutputLabel;
@@ -350,7 +364,8 @@
         private System.Windows.Forms.Button calculateChangeButton;
         private System.Windows.Forms.Label tenderLabel;
         private System.Windows.Forms.TextBox tenderInput;
-        private System.Windows.Forms.Button printLabel;
+        private System.Windows.Forms.Button printButton;
+        private System.Windows.Forms.Button orderButton;
     }
 }
 

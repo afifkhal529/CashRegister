@@ -15,7 +15,7 @@ namespace CashRegister
     public partial class appetizerLabel : Form
     {
         double fries = 0;
-        double samosas = 0;
+        double pasta = 0;
         double drinks = 0;
         double total = 0;
         double subtotal = 0;
@@ -33,11 +33,11 @@ namespace CashRegister
         {
             fries = Convert.ToDouble(friesInput.Text);
 
-            samosas = Convert.ToDouble(samosaInput.Text);
+            pasta = Convert.ToDouble(pastaInput.Text);
 
             drinks = Convert.ToDouble(drinksInput.Text);
 
-            subtotal = (fries + samosas + drinks) * 2.00;
+            subtotal = (fries + pasta + drinks) * 2.00;
 
             tax = subtotal * 0.13;
 
@@ -61,9 +61,50 @@ namespace CashRegister
 
         }
 
-        private void printLabel_Click(object sender, EventArgs e)
+        private void printButton_Click(object sender, EventArgs e)
         {
-            
+            receiptOutputLabel.Text += $"\n        The Authentic Cuisine";
+
+            receiptOutputLabel.Text += $"\n";
+
+            receiptOutputLabel.Text += $"\n Fries                    x{fries}  $ 2.00";
+
+            receiptOutputLabel.Text += $"\n";
+
+            receiptOutputLabel.Text += $"\n Pasta                    x{pasta}  $ 2.00";
+
+            receiptOutputLabel.Text += $"\n";
+
+            receiptOutputLabel.Text += $"\n Drinks                   x{drinks}  $ 2.00";
+
+            receiptOutputLabel.Text += $"\n";
+
+            receiptOutputLabel.Text += $"\n Subtotal                     $ {subtotal}.00";
+
+            receiptOutputLabel.Text += $"\n Tax                          $ {tax}";
+
+            receiptOutputLabel.Text += $"\n Total                        $ {total}";
+
+            receiptOutputLabel.Text += $"\n";
+
+            receiptOutputLabel.Text += $"\n Tendered                     $ {tender}";
+
+            receiptOutputLabel.Text += $"\n Change                       $ {change}";
+
+            receiptOutputLabel.Text += $"\n         Have a Nice Day :)";
+        }
+
+        private void orderButton_Click(object sender, EventArgs e)
+        {
+            friesInput.Text = "";
+            pastaInput.Text = "";
+            drinksInput.Text = "";
+            totalOutput.Text = "";
+            subTotalOutput.Text = "";
+            taxOutput.Text = "";
+            tenderInput.Text = "";
+            changeOutput.Text = "";
+            receiptOutputLabel.Text = "";
         }
     }
 }
