@@ -57,8 +57,7 @@ namespace CashRegister
         private void calculateChangeButton_Click(object sender, EventArgs e)
         {
             tender = Convert.ToDouble(tenderInput.Text);
-
-            change = Convert.ToDouble(tenderInput.Text);
+            
 
             change = tender - total;
 
@@ -100,15 +99,15 @@ namespace CashRegister
             receiptOutputLabel.Refresh();
             Thread.Sleep(300);
 
-            receiptOutputLabel.Text += $"\n Subtotal                     $ {subtotal}.00";
+            receiptOutputLabel.Text += $"\n Subtotal                     {subtotal.ToString("C")}";
             receiptOutputLabel.Refresh();
             Thread.Sleep(300);
 
-            receiptOutputLabel.Text += $"\n Tax                          $ {tax}";
+            receiptOutputLabel.Text += $"\n Tax                          {tax.ToString("C")}";
             receiptOutputLabel.Refresh();
             Thread.Sleep(300);
 
-            receiptOutputLabel.Text += $"\n Total                        $ {total}";
+            receiptOutputLabel.Text += $"\n Total                        {total.ToString("C")}";
             receiptOutputLabel.Refresh();
             Thread.Sleep(300);
 
@@ -116,11 +115,11 @@ namespace CashRegister
             receiptOutputLabel.Refresh();
             Thread.Sleep(300);
 
-            receiptOutputLabel.Text += $"\n Tendered                   $ {tender}.00";
+            receiptOutputLabel.Text += $"\n Tendered                    {tender.ToString("C")}";
             receiptOutputLabel.Refresh();
             Thread.Sleep(300);
 
-            receiptOutputLabel.Text += $"\n Change                     $ {change}";
+            receiptOutputLabel.Text += $"\n Change                      {change.ToString("C")}";
             receiptOutputLabel.Refresh();
             Thread.Sleep(300);
 
