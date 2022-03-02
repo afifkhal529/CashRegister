@@ -80,7 +80,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Ivory;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(38, 104);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 23);
@@ -91,7 +91,7 @@
             // 
             this.friesLabel.AutoSize = true;
             this.friesLabel.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.friesLabel.ForeColor = System.Drawing.Color.Ivory;
+            this.friesLabel.ForeColor = System.Drawing.Color.Black;
             this.friesLabel.Location = new System.Drawing.Point(38, 146);
             this.friesLabel.Name = "friesLabel";
             this.friesLabel.Size = new System.Drawing.Size(42, 23);
@@ -102,7 +102,7 @@
             // 
             this.pastaLabel.AutoSize = true;
             this.pastaLabel.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pastaLabel.ForeColor = System.Drawing.Color.Ivory;
+            this.pastaLabel.ForeColor = System.Drawing.Color.Black;
             this.pastaLabel.Location = new System.Drawing.Point(38, 192);
             this.pastaLabel.Name = "pastaLabel";
             this.pastaLabel.Size = new System.Drawing.Size(47, 23);
@@ -135,8 +135,9 @@
             // 
             // receiptOutputLabel
             // 
-            this.receiptOutputLabel.BackColor = System.Drawing.Color.Honeydew;
+            this.receiptOutputLabel.BackColor = System.Drawing.Color.FloralWhite;
             this.receiptOutputLabel.Font = new System.Drawing.Font("Cascadia Code", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receiptOutputLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.receiptOutputLabel.Location = new System.Drawing.Point(551, 104);
             this.receiptOutputLabel.Name = "receiptOutputLabel";
             this.receiptOutputLabel.Size = new System.Drawing.Size(233, 252);
@@ -144,9 +145,9 @@
             // 
             // calculateButton
             // 
-            this.calculateButton.BackColor = System.Drawing.Color.Black;
+            this.calculateButton.BackColor = System.Drawing.Color.OliveDrab;
             this.calculateButton.Font = new System.Drawing.Font("Cascadia Code", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calculateButton.ForeColor = System.Drawing.Color.Ivory;
+            this.calculateButton.ForeColor = System.Drawing.Color.Black;
             this.calculateButton.Location = new System.Drawing.Point(34, 306);
             this.calculateButton.Name = "calculateButton";
             this.calculateButton.Size = new System.Drawing.Size(84, 29);
@@ -159,7 +160,7 @@
             // 
             this.drinkLabel.AutoSize = true;
             this.drinkLabel.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drinkLabel.ForeColor = System.Drawing.Color.Ivory;
+            this.drinkLabel.ForeColor = System.Drawing.Color.Black;
             this.drinkLabel.Location = new System.Drawing.Point(38, 241);
             this.drinkLabel.Name = "drinkLabel";
             this.drinkLabel.Size = new System.Drawing.Size(54, 23);
@@ -177,7 +178,7 @@
             // 
             this.subTotalLabel.AutoSize = true;
             this.subTotalLabel.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subTotalLabel.ForeColor = System.Drawing.Color.Ivory;
+            this.subTotalLabel.ForeColor = System.Drawing.Color.Black;
             this.subTotalLabel.Location = new System.Drawing.Point(273, 106);
             this.subTotalLabel.Name = "subTotalLabel";
             this.subTotalLabel.Size = new System.Drawing.Size(61, 21);
@@ -195,7 +196,7 @@
             // 
             this.taxLabel.AutoSize = true;
             this.taxLabel.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taxLabel.ForeColor = System.Drawing.Color.Ivory;
+            this.taxLabel.ForeColor = System.Drawing.Color.Black;
             this.taxLabel.Location = new System.Drawing.Point(273, 148);
             this.taxLabel.Name = "taxLabel";
             this.taxLabel.Size = new System.Drawing.Size(31, 21);
@@ -213,7 +214,7 @@
             // 
             this.totalLabel.AutoSize = true;
             this.totalLabel.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalLabel.ForeColor = System.Drawing.Color.Ivory;
+            this.totalLabel.ForeColor = System.Drawing.Color.Black;
             this.totalLabel.Location = new System.Drawing.Point(273, 194);
             this.totalLabel.Name = "totalLabel";
             this.totalLabel.Size = new System.Drawing.Size(41, 21);
@@ -246,9 +247,9 @@
             // 
             // calculateChangeButton
             // 
-            this.calculateChangeButton.BackColor = System.Drawing.Color.Black;
+            this.calculateChangeButton.BackColor = System.Drawing.Color.OliveDrab;
             this.calculateChangeButton.Font = new System.Drawing.Font("Cascadia Code", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calculateChangeButton.ForeColor = System.Drawing.Color.Ivory;
+            this.calculateChangeButton.ForeColor = System.Drawing.Color.Black;
             this.calculateChangeButton.Location = new System.Drawing.Point(277, 306);
             this.calculateChangeButton.Name = "calculateChangeButton";
             this.calculateChangeButton.Size = new System.Drawing.Size(120, 29);
@@ -261,7 +262,7 @@
             // 
             this.tenderLabel.AutoSize = true;
             this.tenderLabel.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tenderLabel.ForeColor = System.Drawing.Color.Ivory;
+            this.tenderLabel.ForeColor = System.Drawing.Color.Black;
             this.tenderLabel.Location = new System.Drawing.Point(273, 243);
             this.tenderLabel.Name = "tenderLabel";
             this.tenderLabel.Size = new System.Drawing.Size(124, 21);
@@ -277,9 +278,9 @@
             // 
             // printButton
             // 
-            this.printButton.BackColor = System.Drawing.Color.Black;
+            this.printButton.BackColor = System.Drawing.Color.OliveDrab;
             this.printButton.Font = new System.Drawing.Font("Cascadia Code", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printButton.ForeColor = System.Drawing.Color.Ivory;
+            this.printButton.ForeColor = System.Drawing.Color.Black;
             this.printButton.Location = new System.Drawing.Point(321, 354);
             this.printButton.Name = "printButton";
             this.printButton.Size = new System.Drawing.Size(120, 29);
@@ -290,9 +291,9 @@
             // 
             // orderButton
             // 
-            this.orderButton.BackColor = System.Drawing.Color.Black;
+            this.orderButton.BackColor = System.Drawing.Color.OliveDrab;
             this.orderButton.Font = new System.Drawing.Font("Cascadia Code", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderButton.ForeColor = System.Drawing.Color.Ivory;
+            this.orderButton.ForeColor = System.Drawing.Color.Black;
             this.orderButton.Location = new System.Drawing.Point(554, 375);
             this.orderButton.Name = "orderButton";
             this.orderButton.Size = new System.Drawing.Size(84, 29);
@@ -305,7 +306,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.orderButton);
             this.Controls.Add(this.printButton);

@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace CashRegister
 {
-    
+
 
     public partial class appetizerLabel : Form
     {
@@ -31,29 +32,33 @@ namespace CashRegister
 
         private void calculateButton_Click(object sender, EventArgs e)
         {
-            fries = Convert.ToDouble(friesInput.Text);
+            try
+            {
+                fries = Convert.ToDouble(friesInput.Text);
+                pasta = Convert.ToDouble(pastaInput.Text);
+                drinks = Convert.ToDouble(drinksInput.Text);
 
-            pasta = Convert.ToDouble(pastaInput.Text);
+                subtotal = (fries + pasta + drinks) * 2.00;
+                tax = subtotal * 0.13;
+                total = subtotal + tax;
 
-            drinks = Convert.ToDouble(drinksInput.Text);
+                subTotalOutput.Text = $"{subtotal.ToString("C")}";
+                taxOutput.Text = $"{tax.ToString("C")}";
+                totalOutput.Text = $"{total.ToString("C")}";
 
-            subtotal = (fries + pasta + drinks) * 2.00;
-
-            tax = subtotal * 0.13;
-
-            total = subtotal + tax;
-
-            subTotalOutput.Text = $"{subtotal.ToString("C")}";
-
-            taxOutput.Text = $"{tax.ToString("C")}";
-
-            totalOutput.Text = $"{total.ToString("C")}";
-
+            }
+            catch
+            {
+                subTotalOutput.Text = "ERROR";
+                taxOutput.Text = "ERROR";
+                totalOutput.Text = "ERROR";
+            }
         }
-
         private void calculateChangeButton_Click(object sender, EventArgs e)
         {
             tender = Convert.ToDouble(tenderInput.Text);
+
+            change = Convert.ToDouble(tenderInput.Text);
 
             change = tender - total;
 
@@ -64,32 +69,60 @@ namespace CashRegister
         private void printButton_Click(object sender, EventArgs e)
         {
             receiptOutputLabel.Text += $"\n        The Authentic Cuisine";
+            receiptOutputLabel.Refresh();
+            Thread.Sleep(300);
 
             receiptOutputLabel.Text += $"\n";
+            receiptOutputLabel.Refresh();
+            Thread.Sleep(300);
 
             receiptOutputLabel.Text += $"\n Fries                    x{fries}  $ 2.00";
+            receiptOutputLabel.Refresh();
+            Thread.Sleep(300);
 
             receiptOutputLabel.Text += $"\n";
+            receiptOutputLabel.Refresh();
+            Thread.Sleep(300);
 
             receiptOutputLabel.Text += $"\n Pasta                    x{pasta}  $ 2.00";
+            receiptOutputLabel.Refresh();
+            Thread.Sleep(300);
 
             receiptOutputLabel.Text += $"\n";
+            receiptOutputLabel.Refresh();
+            Thread.Sleep(300);
 
             receiptOutputLabel.Text += $"\n Drinks                   x{drinks}  $ 2.00";
+            receiptOutputLabel.Refresh();
+            Thread.Sleep(300);
 
             receiptOutputLabel.Text += $"\n";
+            receiptOutputLabel.Refresh();
+            Thread.Sleep(300);
 
             receiptOutputLabel.Text += $"\n Subtotal                     $ {subtotal}.00";
+            receiptOutputLabel.Refresh();
+            Thread.Sleep(300);
 
             receiptOutputLabel.Text += $"\n Tax                          $ {tax}";
+            receiptOutputLabel.Refresh();
+            Thread.Sleep(300);
 
             receiptOutputLabel.Text += $"\n Total                        $ {total}";
+            receiptOutputLabel.Refresh();
+            Thread.Sleep(300);
 
             receiptOutputLabel.Text += $"\n";
+            receiptOutputLabel.Refresh();
+            Thread.Sleep(300);
 
-            receiptOutputLabel.Text += $"\n Tendered                     $ {tender}";
+            receiptOutputLabel.Text += $"\n Tendered                   $ {tender}.00";
+            receiptOutputLabel.Refresh();
+            Thread.Sleep(300);
 
-            receiptOutputLabel.Text += $"\n Change                       $ {change}";
+            receiptOutputLabel.Text += $"\n Change                     $ {change}";
+            receiptOutputLabel.Refresh();
+            Thread.Sleep(300);
 
             receiptOutputLabel.Text += $"\n         Have a Nice Day :)";
         }
