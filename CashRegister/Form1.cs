@@ -124,6 +124,8 @@ namespace CashRegister
             Thread.Sleep(300);
 
             receiptOutputLabel.Text += $"\n         Have a Nice Day :)";
+            receiptOutputLabel.Refresh();
+            Thread.Sleep(300);
         }
 
         private void orderButton_Click(object sender, EventArgs e)
