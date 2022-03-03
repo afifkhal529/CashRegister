@@ -138,7 +138,7 @@ namespace CashRegister
             taxOutput.Text = "";
             tenderInput.Text = "";
             changeOutput.Text = "";
-            receiptOutputLabel.Text = "";
+            receiptOutputLabel.Text = String.Empty;
         }
     }
 }
